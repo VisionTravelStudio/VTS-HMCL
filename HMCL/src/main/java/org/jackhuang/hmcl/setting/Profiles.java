@@ -48,14 +48,12 @@ public final class Profiles {
     }
 
     public static String getProfileDisplayName(Profile profile) {
-        switch (profile.getName()) {
-            case Profiles.DEFAULT_PROFILE:
-                return i18n("profile.default");
-            case Profiles.HOME_PROFILE:
-                return i18n("profile.home");
-            default:
-                return profile.getName();
+        if (profile.getName().equals(Profiles.DEFAULT_PROFILE)) {
+            return i18n("profile.default");
+            //case Profiles.HOME_PROFILE:
+            //return i18n("profile.home");
         }
+        return profile.getName();
     }
 
     private static final ObservableList<Profile> profiles = observableArrayList(profile -> new Observable[] { profile });

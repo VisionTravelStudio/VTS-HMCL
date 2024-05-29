@@ -45,7 +45,7 @@ public class FeedbackPage extends SpinnerPane {
             users.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
             users.setTitle(i18n("feedback.qq_group"));
             users.setSubtitle(i18n("feedback.qq_group.statement"));
-            users.setExternalLink("https://docs.hmcl.net/groups.html");
+            users.setExternalLink("https://qm.qq.com/q/uZUVlOvqyk");
 
             IconedTwoLineListItem github = new IconedTwoLineListItem();
             github.setImage(FXUtils.newBuiltinImage("/assets/img/github.png"));
@@ -57,15 +57,15 @@ public class FeedbackPage extends SpinnerPane {
             discord.setImage(FXUtils.newBuiltinImage("/assets/img/discord.png"));
             discord.setTitle(i18n("feedback.discord"));
             discord.setSubtitle(i18n("feedback.discord.statement"));
-            discord.setExternalLink("https://discord.gg/jVvC7HfM6U");
+            discord.setExternalLink("https://discord.gg/RDJhXb7CT3");
 
-            IconedTwoLineListItem kookapp = new IconedTwoLineListItem();
-            kookapp.setImage(FXUtils.newBuiltinImage("/assets/img/kookapp.png"));
-            kookapp.setTitle(i18n("feedback.kookapp"));
-            kookapp.setSubtitle(i18n("feedback.kookapp.statement"));
-            kookapp.setExternalLink("https://kook.top/Kx7n3t");
+            //IconedTwoLineListItem kookapp = new IconedTwoLineListItem();
+            //kookapp.setImage(FXUtils.newBuiltinImage("/assets/img/kookapp.png"));
+            //kookapp.setTitle(i18n("feedback.kookapp"));
+            //kookapp.setSubtitle(i18n("feedback.kookapp.statement"));
+            //kookapp.setExternalLink("https://kook.top/Kx7n3t");
 
-            community.getContent().setAll(users, github, discord, kookapp);
+            community.getContent().setAll(users, github, discord);
         }
 
         content.getChildren().addAll(

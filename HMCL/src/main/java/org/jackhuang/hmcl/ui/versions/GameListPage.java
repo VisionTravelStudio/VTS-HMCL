@@ -69,21 +69,21 @@ public class GameListPage extends DecoratorAnimatedPage implements DecoratorPage
             ScrollPane pane = new ScrollPane();
             VBox.setVgrow(pane, Priority.ALWAYS);
             {
-                AdvancedListItem addProfileItem = new AdvancedListItem();
-                addProfileItem.getStyleClass().add("navigation-drawer-item");
-                addProfileItem.setTitle(i18n("profile.new"));
-                addProfileItem.setActionButtonVisible(false);
-                addProfileItem.setLeftGraphic(VersionPage.wrap(SVG.PLUS_CIRCLE_OUTLINE));
-                addProfileItem.setOnAction(e -> Controllers.navigate(new ProfilePage(null)));
+                //AdvancedListItem addProfileItem = new AdvancedListItem();
+                //addProfileItem.getStyleClass().add("navigation-drawer-item");
+                //addProfileItem.setTitle(i18n("profile.new"));
+                //addProfileItem.setActionButtonVisible(false);
+                //addProfileItem.setLeftGraphic(VersionPage.wrap(SVG.PLUS_CIRCLE_OUTLINE));
+                //addProfileItem.setOnAction(e -> Controllers.navigate(new ProfilePage(null)));
 
-                pane.setFitToWidth(true);
-                VBox wrapper = new VBox();
-                wrapper.getStyleClass().add("advanced-list-box-content");
-                VBox box = new VBox();
-                box.setFillWidth(true);
-                Bindings.bindContent(box.getChildren(), profileListItems);
-                wrapper.getChildren().setAll(box, addProfileItem);
-                pane.setContent(wrapper);
+                //pane.setFitToWidth(true);
+                //VBox wrapper = new VBox();
+                //wrapper.getStyleClass().add("advanced-list-box-content");
+                //VBox box = new VBox();
+                //box.setFillWidth(true);
+                //Bindings.bindContent(box.getChildren(), profileListItems);
+                //wrapper.getChildren().setAll(box, addProfileItem);
+                //pane.setContent(wrapper);
             }
 
             AdvancedListBox bottomLeftCornerList = new AdvancedListBox()
@@ -93,12 +93,12 @@ public class GameListPage extends DecoratorAnimatedPage implements DecoratorPage
                         installNewGameItem.setOnAction(e -> Versions.addNewGame());
                         runInFX(() -> FXUtils.installFastTooltip(installNewGameItem, i18n("install.new_game")));
                     })
-                    .addNavigationDrawerItem(installModpackItem -> {
-                        installModpackItem.setTitle(i18n("install.modpack"));
-                        installModpackItem.setLeftGraphic(VersionPage.wrap(SVG.PACK));
-                        installModpackItem.setOnAction(e -> Versions.importModpack());
-                        runInFX(() -> FXUtils.installFastTooltip(installModpackItem, i18n("install.modpack")));
-                    })
+                    //.addNavigationDrawerItem(installModpackItem -> {
+                    //    installModpackItem.setTitle(i18n("install.modpack"));
+                    //    installModpackItem.setLeftGraphic(VersionPage.wrap(SVG.PACK));
+                    //    installModpackItem.setOnAction(e -> Versions.importModpack());
+                    //    runInFX(() -> FXUtils.installFastTooltip(installModpackItem, i18n("install.modpack")));
+                    //})
                     .addNavigationDrawerItem(refreshItem -> {
                         refreshItem.setTitle(i18n("button.refresh"));
                         refreshItem.setLeftGraphic(VersionPage.wrap(SVG.REFRESH));

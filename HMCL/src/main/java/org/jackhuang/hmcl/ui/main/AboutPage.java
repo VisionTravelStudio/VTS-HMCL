@@ -34,99 +34,117 @@ public class AboutPage extends StackPane {
         ComponentList about = new ComponentList();
         {
             IconedTwoLineListItem launcher = new IconedTwoLineListItem();
-            launcher.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
-            launcher.setTitle("Hello Minecraft! Launcher");
-            launcher.setSubtitle(Metadata.VERSION);
-            launcher.setExternalLink("https://hmcl.huangyuhui.net");
+            //launcher.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
+            launcher.setTitle("VTS-HMCL");
+            launcher.setSubtitle("v1.0.0.0");
+            launcher.setExternalLink("https://github.com/VisionTravelStudio");
 
             IconedTwoLineListItem author = new IconedTwoLineListItem();
-            author.setImage(FXUtils.newBuiltinImage("/assets/img/yellow_fish.png"));
+            //author.setImage(FXUtils.newBuiltinImage("/assets/img/yellow_fish.png"));
             author.setTitle("huanghongxun");
             author.setSubtitle(i18n("about.author.statement"));
             author.setExternalLink("https://space.bilibili.com/1445341");
 
-            about.getContent().setAll(launcher, author);
+            IconedTwoLineListItem visiontravel = new IconedTwoLineListItem();
+            //visiontravel.setImage(FXUtils.newBuiltinImage("/assets/img/visiontravel.png"));
+            visiontravel.setTitle("Vision Travel Studio");
+            visiontravel.setSubtitle(i18n("about.thanks_to.visiontravel.statement"));
+            visiontravel.setExternalLink("https://space.bilibili.com/614688308");
+
+            about.getContent().setAll(launcher, author, visiontravel);
         }
 
         ComponentList thanks = new ComponentList();
         {
+            IconedTwoLineListItem vtszgy = new IconedTwoLineListItem();
+            //vtszgy.setImage(FXUtils.newBuiltinImage("/assets/img/vtszgy.png"));
+            vtszgy.setTitle("zgy22506");
+            vtszgy.setSubtitle(i18n("about.thanks_to.vtszgy.statement"));
+            vtszgy.setExternalLink("https://space.bilibili.com/1999540880");
+
+            IconedTwoLineListItem vtsdt = new IconedTwoLineListItem();
+            //vtsdt.setImage(FXUtils.newBuiltinImage("/assets/img/visiontravel.png"));
+            vtsdt.setTitle("Vision Travel Studio Develop Team");
+            vtsdt.setSubtitle(i18n("about.thanks_to.vtsdt.statement"));
+            vtsdt.setExternalLink("https://github.com/VisionTravelStudio");
+
             IconedTwoLineListItem yushijinhun = new IconedTwoLineListItem();
-            yushijinhun.setImage(FXUtils.newBuiltinImage("/assets/img/yushijinhun.png"));
+            //yushijinhun.setImage(FXUtils.newBuiltinImage("/assets/img/yushijinhun.png"));
             yushijinhun.setTitle("yushijinhun");
             yushijinhun.setSubtitle(i18n("about.thanks_to.yushijinhun.statement"));
             yushijinhun.setExternalLink("https://yushi.moe/");
 
             IconedTwoLineListItem bangbang93 = new IconedTwoLineListItem();
-            bangbang93.setImage(FXUtils.newBuiltinImage("/assets/img/bangbang93.png"));
+            //bangbang93.setImage(FXUtils.newBuiltinImage("/assets/img/bangbang93.png"));
             bangbang93.setTitle("bangbang93");
             bangbang93.setSubtitle(i18n("about.thanks_to.bangbang93.statement"));
             bangbang93.setExternalLink("https://bmclapi2.bangbang93.com/");
 
             IconedTwoLineListItem glavo = new IconedTwoLineListItem();
-            glavo.setImage(FXUtils.newBuiltinImage("/assets/img/glavo.png"));
+            //glavo.setImage(FXUtils.newBuiltinImage("/assets/img/glavo.png"));
             glavo.setTitle("Glavo");
             glavo.setSubtitle(i18n("about.thanks_to.glavo.statement"));
             glavo.setExternalLink("https://github.com/Glavo");
 
             IconedTwoLineListItem zekerzhayard = new IconedTwoLineListItem();
-            zekerzhayard.setImage(FXUtils.newBuiltinImage("/assets/img/zekerzhayard.png"));
+            //zekerzhayard.setImage(FXUtils.newBuiltinImage("/assets/img/zekerzhayard.png"));
             zekerzhayard.setTitle("ZekerZhayard");
             zekerzhayard.setSubtitle(i18n("about.thanks_to.zekerzhayard.statement"));
             zekerzhayard.setExternalLink("https://github.com/ZekerZhayard");
 
             IconedTwoLineListItem zkitefly = new IconedTwoLineListItem();
-            zkitefly.setImage(FXUtils.newBuiltinImage("/assets/img/zkitefly.png"));
+            //zkitefly.setImage(FXUtils.newBuiltinImage("/assets/img/zkitefly.png"));
             zkitefly.setTitle("Zkitefly");
             zkitefly.setSubtitle(i18n("about.thanks_to.zkitefly.statement"));
             zkitefly.setExternalLink("https://github.com/zkitefly");
 
             IconedTwoLineListItem burningtnt = new IconedTwoLineListItem();
-            burningtnt.setImage(FXUtils.newBuiltinImage("/assets/img/burningtnt.png"));
+            //.setImage(FXUtils.newBuiltinImage("/assets/img/burningtnt.png"));
             burningtnt.setTitle("Burning_TNT");
             burningtnt.setSubtitle(i18n("about.thanks_to.burningtnt.statement"));
             burningtnt.setExternalLink("https://github.com/burningtnt");
 
             IconedTwoLineListItem shulkerSakura = new IconedTwoLineListItem();
             shulkerSakura.setTitle("ShulkerSakura");
-            shulkerSakura.setImage(FXUtils.newBuiltinImage("/assets/img/ShulkerSakura.png"));
+            //shulkerSakura.setImage(FXUtils.newBuiltinImage("/assets/img/ShulkerSakura.png"));
             shulkerSakura.setSubtitle(i18n("about.thanks_to.shulkersakura.statement"));
             shulkerSakura.setExternalLink("https://github.com/ShulkerSakura");
 
             IconedTwoLineListItem gamerteam = new IconedTwoLineListItem();
             gamerteam.setTitle("gamerteam");
-            gamerteam.setImage(FXUtils.newBuiltinImage("/assets/img/gamerteam.png"));
+            //gamerteam.setImage(FXUtils.newBuiltinImage("/assets/img/gamerteam.png"));
             gamerteam.setSubtitle(i18n("about.thanks_to.gamerteam.statement"));
             gamerteam.setExternalLink("http://www.zhaisoul.com/");
 
             IconedTwoLineListItem redLnn = new IconedTwoLineListItem();
             redLnn.setTitle("Red_lnn");
-            redLnn.setImage(FXUtils.newBuiltinImage("/assets/img/red_lnn.png"));
+            //redLnn.setImage(FXUtils.newBuiltinImage("/assets/img/red_lnn.png"));
             redLnn.setSubtitle(i18n("about.thanks_to.red_lnn.statement"));
 
             IconedTwoLineListItem mcmod = new IconedTwoLineListItem();
-            mcmod.setImage(FXUtils.newBuiltinImage("/assets/img/mcmod.png"));
+            //mcmod.setImage(FXUtils.newBuiltinImage("/assets/img/mcmod.png"));
             mcmod.setTitle(i18n("about.thanks_to.mcmod"));
             mcmod.setSubtitle(i18n("about.thanks_to.mcmod.statement"));
             mcmod.setExternalLink("https://www.mcmod.cn/");
 
             IconedTwoLineListItem mcbbs = new IconedTwoLineListItem();
-            mcbbs.setImage(FXUtils.newBuiltinImage("/assets/img/chest.png"));
+            //mcbbs.setImage(FXUtils.newBuiltinImage("/assets/img/chest.png"));
             mcbbs.setTitle(i18n("about.thanks_to.mcbbs"));
             mcbbs.setSubtitle(i18n("about.thanks_to.mcbbs.statement"));
 
             IconedTwoLineListItem contributors = new IconedTwoLineListItem();
-            contributors.setImage(FXUtils.newBuiltinImage("/assets/img/github.png"));
+            //contributors.setImage(FXUtils.newBuiltinImage("/assets/img/github.png"));
             contributors.setTitle(i18n("about.thanks_to.contributors"));
             contributors.setSubtitle(i18n("about.thanks_to.contributors.statement"));
             contributors.setExternalLink("https://github.com/HMCL-dev/HMCL/graphs/contributors");
 
             IconedTwoLineListItem users = new IconedTwoLineListItem();
-            users.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
+            //users.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
             users.setTitle(i18n("about.thanks_to.users"));
             users.setSubtitle(i18n("about.thanks_to.users.statement"));
             users.setExternalLink("https://docs.hmcl.net/groups.html");
 
-            thanks.getContent().setAll(yushijinhun, bangbang93, glavo, zekerzhayard, zkitefly, burningtnt, mcmod, mcbbs, shulkerSakura, gamerteam, redLnn, contributors, users);
+            thanks.getContent().setAll(vtszgy, vtsdt , bangbang93, glavo, zekerzhayard, zkitefly, burningtnt, mcmod, mcbbs, shulkerSakura, gamerteam, redLnn, contributors, users);
         }
 
         ComponentList dep = new ComponentList();

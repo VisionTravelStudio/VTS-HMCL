@@ -179,7 +179,14 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             chatItem.setLeftGraphic(wrap(SVG.CHAT));
             chatItem.setActionButtonVisible(false);
             chatItem.setTitle(i18n("chat"));
-            chatItem.setOnAction(e -> FXUtils.openLink("https://docs.hmcl.net/groups.html"));
+            chatItem.setOnAction(e -> FXUtils.openLink("https://qm.qq.com/q/uZUVlOvqyk"));
+
+            //seventh item in left sidebar
+            AdvancedListItem chatItemDC = new AdvancedListItem();
+            chatItemDC.setLeftGraphic(wrap(SVG.CHAT));
+            chatItemDC.setActionButtonVisible(false);
+            chatItemDC.setTitle(i18n("chat.discord"));
+            chatItemDC.setOnAction(e -> FXUtils.openLink("https://discord.gg/RDJhXb7CT3"));
 
             // the left sidebar
             AdvancedListBox sideBar = new AdvancedListBox()
@@ -187,11 +194,12 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     .add(accountListItem)
                     .startCategory(i18n("version").toUpperCase(Locale.ROOT))
                     .add(gameListItem)
-                    .add(gameItem)
-                    .add(downloadItem)
+                    //.add(gameItem)
+                    //.add(downloadItem)
                     .startCategory(i18n("settings.launcher.general").toUpperCase(Locale.ROOT))
                     .add(launcherSettingsItem)
                     .add(chatItem)
+                    .add(chatItemDC)
                     ;
 
             // the root page, with the sidebar in left, navigator in center.
