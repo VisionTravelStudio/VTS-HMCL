@@ -284,65 +284,56 @@ public class CreateAccountPane extends JFXDialogLayout implements DialogAware {
             detailsContainer.getChildren().remove(detailsPane);
             lblErrorMessage.setText("");
         }
-        if (factory == Accounts.FACTORY_MICROSOFT) {
-            VBox vbox = new VBox(8);
-            if (!Accounts.OAUTH_CALLBACK.getClientId().isEmpty()) {
-                HintPane hintPane = new HintPane(MessageDialogPane.MessageType.INFO);
-                FXUtils.onChangeAndOperate(deviceCode, deviceCode -> {
-                    if (deviceCode != null) {
-                        FXUtils.copyText(deviceCode.getUserCode());
-                        hintPane.setSegment(i18n("account.methods.microsoft.manual", deviceCode.getUserCode(), deviceCode.getVerificationUri()));
-                    } else {
-                        hintPane.setSegment(i18n("account.methods.microsoft.hint"));
-                    }
-                });
-                hintPane.setOnMouseClicked(e -> {
-                    if (deviceCode.get() != null) {
-                        FXUtils.copyText(deviceCode.get().getUserCode());
-                    }
-                });
+        if (factory == Accounts.FACTORY_MICROSOFT) { //disable microsoft login
+            //VBox vbox = new VBox(8);
 
-                holder.add(Accounts.OAUTH_CALLBACK.onGrantDeviceCode.registerWeak(value -> {
-                    runInFX(() -> deviceCode.set(value));
-                }));
-                FlowPane box = new FlowPane();
-                box.setHgap(8);
-                JFXHyperlink birthLink = new JFXHyperlink(i18n("account.methods.microsoft.birth"));
-                birthLink.setExternalLink("https://support.microsoft.com/account-billing/837badbc-999e-54d2-2617-d19206b9540a");
-                JFXHyperlink profileLink = new JFXHyperlink(i18n("account.methods.microsoft.profile"));
-                profileLink.setExternalLink("https://account.live.com/editprof.aspx");
-                JFXHyperlink purchaseLink = new JFXHyperlink(i18n("account.methods.microsoft.purchase"));
-                purchaseLink.setExternalLink(YggdrasilService.PURCHASE_URL);
-                JFXHyperlink deauthorizeLink = new JFXHyperlink(i18n("account.methods.microsoft.deauthorize"));
-                deauthorizeLink.setExternalLink("https://account.live.com/consent/Edit?client_id=000000004C794E0A");
-                JFXHyperlink forgotpasswordLink = new JFXHyperlink(i18n("account.methods.forgot_password"));
-                forgotpasswordLink.setExternalLink("https://www.minecraft.net/password/forgot");
-                JFXHyperlink createProfileLink = new JFXHyperlink(i18n("account.methods.microsoft.makegameidsettings"));
-                createProfileLink.setExternalLink("https://www.minecraft.net/msaprofile/mygames/editprofile");
-                box.getChildren().setAll(profileLink, birthLink, purchaseLink, deauthorizeLink, forgotpasswordLink, createProfileLink);
-                GridPane.setColumnSpan(box, 2);
+            //HintPane hintPane = new HintPane(MessageDialogPane.MessageType.INFO);
+            //FXUtils.onChangeAndOperate(deviceCode, deviceCode -> {
+            //    if (deviceCode != null) {
+            //        FXUtils.copyText(deviceCode.getUserCode());
+            //        hintPane.setSegment(i18n("account.methods.microsoft.manual", deviceCode.getUserCode(), deviceCode.getVerificationUri()));
+            //    } else {
+            //        hintPane.setSegment(i18n("account.methods.microsoft.hint"));
+            //    }
+            //});
+            //hintPane.setOnMouseClicked(e -> {
+            //    if (deviceCode.get() != null) {
+            //        FXUtils.copyText(deviceCode.get().getUserCode());
+            //    }
+            //});
 
-                if (!IntegrityChecker.isOfficial()) {
-                    HintPane unofficialHint = new HintPane(MessageDialogPane.MessageType.WARNING);
-                    unofficialHint.setText(i18n("unofficial.hint"));
-                    vbox.getChildren().add(unofficialHint);
-                }
+            //holder.add(Accounts.OAUTH_CALLBACK.onGrantDeviceCode.registerWeak(value -> {
+            //    runInFX(() -> deviceCode.set(value));
+            //}));
+            //FlowPane box = new FlowPane();
+            //box.setHgap(8);
+            //JFXHyperlink birthLink = new JFXHyperlink(i18n("account.methods.microsoft.birth"));
+            //birthLink.setExternalLink("https://support.microsoft.com/account-billing/837badbc-999e-54d2-2617-d19206b9540a");
+            //JFXHyperlink profileLink = new JFXHyperlink(i18n("account.methods.microsoft.profile"));
+            //profileLink.setExternalLink("https://account.live.com/editprof.aspx");
+            //JFXHyperlink purchaseLink = new JFXHyperlink(i18n("account.methods.microsoft.purchase"));
+            //purchaseLink.setExternalLink(YggdrasilService.PURCHASE_URL);
+            //JFXHyperlink deauthorizeLink = new JFXHyperlink(i18n("account.methods.microsoft.deauthorize"));
+            //deauthorizeLink.setExternalLink("https://account.live.com/consent/Edit?client_id=000000004C794E0A");
+            //JFXHyperlink forgotpasswordLink = new JFXHyperlink(i18n("account.methods.forgot_password"));
+            //forgotpasswordLink.setExternalLink("https://www.minecraft.net/password/forgot");
+            //JFXHyperlink createProfileLink = new JFXHyperlink(i18n("account.methods.microsoft.makegameidsettings"));
+            //createProfileLink.setExternalLink("https://www.minecraft.net/msaprofile/mygames/editprofile");
+            //box.getChildren().setAll(profileLink, birthLink, deauthorizeLink, forgotpasswordLink, createProfileLink);
+            //GridPane.setColumnSpan(box, 2);
 
-                vbox.getChildren().addAll(hintPane, box);
+                //if (!IntegrityChecker.isOfficial()) {
+                //    HintPane unofficialHint = new HintPane(MessageDialogPane.MessageType.WARNING);
+                //    unofficialHint.setText(i18n("unofficial.hint"));
+                //    vbox.getChildren().add(unofficialHint);
+                //}
 
-                btnAccept.setDisable(false);
-            } else {
-                HintPane hintPane = new HintPane(MessageDialogPane.MessageType.WARNING);
-                hintPane.setSegment(i18n("account.methods.microsoft.snapshot"));
+            //vbox.getChildren().addAll(hintPane, box);
 
-                JFXHyperlink officialWebsite = new JFXHyperlink(i18n("account.methods.microsoft.snapshot.website"));
-                officialWebsite.setExternalLink("https://hmcl.huangyuhui.net");
+            //btnAccept.setDisable(false);
 
-                vbox.getChildren().setAll(hintPane, officialWebsite);
-                btnAccept.setDisable(true);
-            }
 
-            detailsPane = vbox;
+            //detailsPane = vbox;
         } else {
             detailsPane = new AccountDetailsInputPane(factory, btnAccept::fire);
             btnAccept.disableProperty().bind(((AccountDetailsInputPane) detailsPane).validProperty().not());
@@ -399,14 +390,14 @@ public class CreateAccountPane extends JFXDialogLayout implements DialogAware {
 
             int rowIndex = 0;
 
-            if (!IntegrityChecker.isOfficial() && !(factory instanceof OfflineAccountFactory)) {
-                HintPane hintPane = new HintPane(MessageDialogPane.MessageType.WARNING);
-                hintPane.setSegment(i18n("unofficial.hint"));
-                GridPane.setColumnSpan(hintPane, 2);
-                add(hintPane, 0, rowIndex);
+            //if (!IntegrityChecker.isOfficial() && !(factory instanceof OfflineAccountFactory)) {
+            //    HintPane hintPane = new HintPane(MessageDialogPane.MessageType.WARNING);
+                //hintPane.setSegment(i18n("unofficial.hint"));
+            //    GridPane.setColumnSpan(hintPane, 2);
+            //    add(hintPane, 0, rowIndex);
 
-                rowIndex++;
-            }
+            //    rowIndex++;
+            //}
 
             if (factory instanceof BoundAuthlibInjectorAccountFactory) {
                 this.server = ((BoundAuthlibInjectorAccountFactory) factory).getServer();
@@ -511,45 +502,45 @@ public class CreateAccountPane extends JFXDialogLayout implements DialogAware {
                 txtUsername.setPromptText(i18n("account.methods.offline.name.special_characters"));
                 runInFX(() -> FXUtils.installFastTooltip(txtUsername, i18n("account.methods.offline.name.special_characters")));
 
-                JFXHyperlink purchaseLink = new JFXHyperlink(i18n("account.methods.microsoft.purchase"));
-                purchaseLink.setExternalLink(YggdrasilService.PURCHASE_URL);
-                HBox linkPane = new HBox(purchaseLink);
-                GridPane.setColumnSpan(linkPane, 2);
-                add(linkPane, 0, rowIndex);
+                //JFXHyperlink purchaseLink = new JFXHyperlink(i18n("account.methods.microsoft.purchase"));
+                //purchaseLink.setExternalLink(YggdrasilService.PURCHASE_URL);
+                //HBox linkPane = new HBox(purchaseLink);
+                //GridPane.setColumnSpan(linkPane, 2);
+                //add(linkPane, 0, rowIndex);
 
                 rowIndex++;
 
-                HBox box = new HBox();
-                MenuUpDownButton advancedButton = new MenuUpDownButton();
-                box.getChildren().setAll(advancedButton);
-                advancedButton.setText(i18n("settings.advanced"));
-                GridPane.setColumnSpan(box, 2);
-                add(box, 0, rowIndex);
+                //HBox box = new HBox();
+                //MenuUpDownButton advancedButton = new MenuUpDownButton();
+                //box.getChildren().setAll(advancedButton);
+                //advancedButton.setText(i18n("settings.advanced"));
+                //GridPane.setColumnSpan(box, 2);
+                //add(box, 0, rowIndex);
 
-                rowIndex++;
+                //rowIndex++;
 
-                Label lblUUID = new Label(i18n("account.methods.offline.uuid"));
-                lblUUID.managedProperty().bind(advancedButton.selectedProperty());
-                lblUUID.visibleProperty().bind(advancedButton.selectedProperty());
-                setHalignment(lblUUID, HPos.LEFT);
-                add(lblUUID, 0, rowIndex);
+                //Label lblUUID = new Label(i18n("account.methods.offline.uuid"));
+                //lblUUID.managedProperty().bind(advancedButton.selectedProperty());
+                //lblUUID.visibleProperty().bind(advancedButton.selectedProperty());
+                //setHalignment(lblUUID, HPos.LEFT);
+                //add(lblUUID, 0, rowIndex);
 
-                txtUUID = new JFXTextField();
-                txtUUID.managedProperty().bind(advancedButton.selectedProperty());
-                txtUUID.visibleProperty().bind(advancedButton.selectedProperty());
-                txtUUID.setValidators(new UUIDValidator());
-                txtUUID.promptTextProperty().bind(BindingMapping.of(txtUsername.textProperty()).map(name -> OfflineAccountFactory.getUUIDFromUserName(name).toString()));
-                txtUUID.setOnAction(e -> onAction.run());
-                add(txtUUID, 1, rowIndex);
+                //txtUUID = new JFXTextField();
+                //txtUUID.managedProperty().bind(advancedButton.selectedProperty());
+                //txtUUID.visibleProperty().bind(advancedButton.selectedProperty());
+                //txtUUID.setValidators(new UUIDValidator());
+                //txtUUID.promptTextProperty().bind(BindingMapping.of(txtUsername.textProperty()).map(name -> OfflineAccountFactory.getUUIDFromUserName(name).toString()));
+                //txtUUID.setOnAction(e -> onAction.run());
+                //add(txtUUID, 1, rowIndex);
 
-                rowIndex++;
+                //rowIndex++;
 
-                HintPane hintPane = new HintPane(MessageDialogPane.MessageType.WARNING);
-                hintPane.managedProperty().bind(advancedButton.selectedProperty());
-                hintPane.visibleProperty().bind(advancedButton.selectedProperty());
-                hintPane.setText(i18n("account.methods.offline.uuid.hint"));
-                GridPane.setColumnSpan(hintPane, 2);
-                add(hintPane, 0, rowIndex);
+                //HintPane hintPane = new HintPane(MessageDialogPane.MessageType.WARNING);
+                //hintPane.managedProperty().bind(advancedButton.selectedProperty());
+                //hintPane.visibleProperty().bind(advancedButton.selectedProperty());
+                //hintPane.setText(i18n("account.methods.offline.uuid.hint"));
+                //GridPane.setColumnSpan(hintPane, 2);
+                //add(hintPane, 0, rowIndex);
 
                 rowIndex++;
             }

@@ -106,13 +106,13 @@ public class AccountListPage extends DecoratorAnimatedPage implements DecoratorP
                     offlineItem.setOnAction(e -> Controllers.dialog(new CreateAccountPane(Accounts.FACTORY_OFFLINE)));
                     boxMethods.getChildren().add(offlineItem);
 
-                    AdvancedListItem microsoftItem = new AdvancedListItem();
-                    microsoftItem.getStyleClass().add("navigation-drawer-item");
-                    microsoftItem.setActionButtonVisible(false);
-                    microsoftItem.setTitle(i18n("account.methods.microsoft"));
-                    microsoftItem.setLeftGraphic(wrap(SVG.MICROSOFT));
-                    microsoftItem.setOnAction(e -> Controllers.dialog(new CreateAccountPane(Accounts.FACTORY_MICROSOFT)));
-                    boxMethods.getChildren().add(microsoftItem);
+                    //AdvancedListItem microsoftItem = new AdvancedListItem();
+                    //microsoftItem.getStyleClass().add("navigation-drawer-item");
+                    //microsoftItem.setActionButtonVisible(false);
+                    //microsoftItem.setTitle(i18n("account.methods.microsoft"));
+                    //microsoftItem.setLeftGraphic(wrap(SVG.MICROSOFT));
+                    //microsoftItem.setOnAction(e -> Controllers.dialog(new CreateAccountPane(Accounts.FACTORY_MICROSOFT)));
+                    //boxMethods.getChildren().add(microsoftItem);
 
                     VBox boxAuthServers = new VBox();
                     authServerItems = MappedObservableList.create(skinnable.authServersProperty(), server -> {
