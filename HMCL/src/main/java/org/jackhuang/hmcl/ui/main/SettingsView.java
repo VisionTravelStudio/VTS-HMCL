@@ -50,11 +50,11 @@ public abstract class SettingsView extends StackPane {
     protected final JFXComboBox<SupportedLocale> cboLanguage;
     protected final MultiFileItem<EnumCommonDirectory> fileCommonLocation;
     protected final ComponentSublist fileCommonLocationSublist;
-    protected final Label lblUpdate;
-    protected final Label lblUpdateSub;
-    protected final JFXRadioButton chkUpdateStable;
-    protected final JFXRadioButton chkUpdateDev;
-    protected final JFXButton btnUpdate;
+    //protected final Label lblUpdate;
+    //protected final Label lblUpdateSub;
+    //protected final JFXRadioButton chkUpdateStable;
+    //protected final JFXRadioButton chkUpdateDev;
+    //protected final JFXButton btnUpdate;
     protected final ScrollPane scroll;
 
     public SettingsView() {
@@ -103,9 +103,9 @@ public abstract class SettingsView extends StackPane {
                     }
                 }
 
-                {
+                /*{
                     ComponentSublist updatePane = new ComponentSublist();
-                    updatePane.setTitle(i18n("update"));
+                    //updatePane.setTitle(i18n("update"));
                     updatePane.setHasSubtitle(true);
                     {
                         VBox headerLeft = new VBox();
@@ -114,8 +114,8 @@ public abstract class SettingsView extends StackPane {
                         lblUpdateSub = new Label();
                         lblUpdateSub.getStyleClass().add("subtitle-label");
 
-                        headerLeft.getChildren().setAll(lblUpdate, lblUpdateSub);
-                        updatePane.setHeaderLeft(headerLeft);
+                        //headerLeft.getChildren().setAll(lblUpdate, lblUpdateSub);
+                        //updatePane.setHeaderLeft(headerLeft);
                     }
 
                     {
@@ -137,12 +137,12 @@ public abstract class SettingsView extends StackPane {
                         TextFlow noteWrapper = new TextFlow(new Text(i18n("update.note")));
                         VBox.setMargin(noteWrapper, new Insets(10, 0, 0, 0));
 
-                        content.getChildren().setAll(chkUpdateStable, chkUpdateDev, noteWrapper);
+                        //content.getChildren().setAll(chkUpdateStable, chkUpdateDev, noteWrapper);
 
-                        updatePane.getContent().add(content);
+                        //updatePane.getContent().add(content);
                     }
                     settingsPane.getContent().add(updatePane);
-                }
+                }*/
 
                 {
                     fileCommonLocation = new MultiFileItem<>();

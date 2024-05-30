@@ -121,7 +121,7 @@ public final class UpdateChecker {
                         latestVersion.set(finalResult);
                     }
                 });
-            }, "Update Checker", true);
+            }, "Update Checker", false);
         });
     }
 }

@@ -197,7 +197,7 @@ public class DecoratorSkin extends SkinBase<Decorator> {
             buttonsContainer.setMaxHeight(40);
             {
                 //JFXButton btnHelp = new JFXButton();
-                //btnHelp.setGraphic(SVG.HELP_CIRCLE_OUTLINE.createIcon(Theme.foregroundFillBinding(), -1, -1));
+                //btnHelp.setGraphic(SVG.MOJANG.createIcon(Theme.foregroundFillBinding(), -1, -1));
                 //btnHelp.getStyleClass().add("jfx-decorator-button");
                 //btnHelp.setOnAction(e -> FXUtils.openLink("https://docs.hmcl.net/help.html"));
 
