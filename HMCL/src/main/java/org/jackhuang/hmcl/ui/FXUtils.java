@@ -679,7 +679,7 @@ public final class FXUtils {
     public static void setIcon(Stage stage) {
         String icon;
         if (OperatingSystem.CURRENT_OS == OperatingSystem.WINDOWS) {
-            icon = "/assets/img/icon.png";
+            icon = "/assets/img/VTSSL-icon.png";
         } else {
             icon = "/assets/img/icon@4x.png";
         }

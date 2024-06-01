@@ -112,7 +112,7 @@ public class LauncherSettingsPage extends DecoratorAnimatedPage implements Decor
                         aboutItem.activeProperty().bind(tab.getSelectionModel().selectedItemProperty().isEqualTo(aboutTab));
                         aboutItem.setOnAction(e -> tab.select(aboutTab));
                     });
-            FXUtils.setLimitWidth(sideBar, 200);
+            FXUtils.setLimitWidth(sideBar, 100);
             setLeft(sideBar);
         }
 

@@ -148,14 +148,14 @@ public class DecoratorSkin extends SkinBase<Decorator> {
                 wrapper.backgroundProperty().bind(skinnable.contentBackgroundProperty());
                 container.backgroundProperty().unbind();
                 container.setBackground(null);
-                titleContainer.getStyleClass().remove("background");
+                //titleContainer.getStyleClass().remove("alpha-background");
                 titleContainer.getStyleClass().add("gray-background");
             } else {
                 container.backgroundProperty().bind(skinnable.contentBackgroundProperty());
                 wrapper.backgroundProperty().unbind();
                 wrapper.setBackground(null);
-                titleContainer.getStyleClass().add("background");
-                titleContainer.getStyleClass().remove("gray-background");
+                titleContainer.getStyleClass().add("gray-background");
+                //titleContainer.getStyleClass().remove("gray-background");
             }
         });
 
@@ -194,7 +194,7 @@ public class DecoratorSkin extends SkinBase<Decorator> {
         {
             HBox buttonsContainer = new HBox();
             buttonsContainer.setAlignment(Pos.TOP_RIGHT);
-            buttonsContainer.setMaxHeight(40);
+            buttonsContainer.setMaxHeight(40); //o:40
             {
                 //JFXButton btnHelp = new JFXButton();
                 //btnHelp.setGraphic(SVG.MOJANG.createIcon(Theme.foregroundFillBinding(), -1, -1));

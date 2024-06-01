@@ -23,6 +23,8 @@ import org.jackhuang.hmcl.ui.FXUtils;
 public enum VersionIconType {
     DEFAULT("/assets/img/grass.png"),
 
+    VTSSL("/assets/img/VTSSL-logo.png"),
+
     GRASS("/assets/img/grass.png"),
     CHEST("/assets/img/chest.png"),
     CHICKEN("/assets/img/chicken.png"),

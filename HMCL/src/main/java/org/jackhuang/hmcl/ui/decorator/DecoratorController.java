@@ -194,9 +194,8 @@ public class DecoratorController {
             case TRANSLUCENT:
                 return new Background(new BackgroundFill(new Color(1, 1, 1, 0.5), CornerRadii.EMPTY, Insets.EMPTY));
         }
-        if (image == null) {
+        //Ensure the integrity of the launcher
             image = loadDefaultBackgroundImage();
-        }
         return new Background(new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(800, 480, false, false, true, true)));
     }
 

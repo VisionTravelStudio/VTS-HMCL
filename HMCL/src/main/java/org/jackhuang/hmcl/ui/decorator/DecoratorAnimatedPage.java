@@ -63,7 +63,7 @@ public class DecoratorAnimatedPage extends Control {
 
             BorderPane pane = new BorderPane();
             pane.setLeft(control.left);
-            FXUtils.setLimitWidth(control.left, 200);
+            FXUtils.setLimitWidth(control.left, 68);
             pane.setCenter(control.center);
             getChildren().setAll(pane);
         }

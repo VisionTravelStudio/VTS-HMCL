@@ -31,8 +31,8 @@ public final class Metadata {
     private Metadata() {}
 
     public static final String NAME = "VTS-HMCL";
-    public static final String FULL_NAME = "VTS-HMCL";
-    public static final String VERSION = "1.0.2";
+    public static final String FULL_NAME = "VTS-HMCLauncher";
+    public static final String VERSION = "1.1.0";
 
     public static final String TITLE = NAME + " v" + VERSION;
     public static final String FULL_TITLE = FULL_NAME + " v" + VERSION;

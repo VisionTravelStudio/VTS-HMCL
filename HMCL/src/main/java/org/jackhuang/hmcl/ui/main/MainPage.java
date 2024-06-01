@@ -92,8 +92,8 @@ public final class MainPage extends StackPane implements DecoratorPage {
         titleNode.setPadding(new Insets(0, 0, 0, 2));
         titleNode.setAlignment(Pos.CENTER_LEFT);
 
-        ImageView titleIcon = new ImageView(FXUtils.newBuiltinImage("/assets/img/icon-title.png"));
-        Label titleLabel = new Label(Metadata.FULL_TITLE);
+        ImageView titleIcon = new ImageView(FXUtils.newBuiltinImage("/assets/img/VTSSL-icon-title.png"));
+        Label titleLabel = new Label(" "); // Original: Metadata.FULL_TITLE
         titleLabel.getStyleClass().add("jfx-decorator-title");
         titleNode.getChildren().setAll(titleIcon, titleLabel);
 
@@ -101,7 +101,7 @@ public final class MainPage extends StackPane implements DecoratorPage {
 
         setPadding(new Insets(20));
 
-        if (Metadata.isNightly() || (Metadata.isDev() && !Objects.equals(Metadata.VERSION, config().getShownTips().get(ANNOUNCEMENT)))) {
+        /*if (Metadata.isNightly() || (Metadata.isDev() && !Objects.equals(Metadata.VERSION, config().getShownTips().get(ANNOUNCEMENT)))) {
             announcementPane = new VBox(16);
             if (Metadata.isNightly()) {
                 announcementPane.getChildren().add(new AnnouncementCard(i18n("update.channel.nightly.title"), i18n("update.channel.nightly.hint")));
@@ -109,7 +109,7 @@ public final class MainPage extends StackPane implements DecoratorPage {
                 announcementPane.getChildren().add(new AnnouncementCard(i18n("update.channel.dev.title"), i18n("update.channel.dev.hint")));
             }
             getChildren().add(announcementPane);
-        }
+        }*/
 
         updatePane = new StackPane();
         updatePane.setVisible(false);

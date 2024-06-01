@@ -18,6 +18,7 @@
 package org.jackhuang.hmcl.ui.main;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
+import javafx.scene.image.ImageView;
 import org.jackhuang.hmcl.event.EventBus;
 import org.jackhuang.hmcl.event.RefreshedVersionsEvent;
 import org.jackhuang.hmcl.game.HMCLGameRepository;
@@ -57,9 +58,13 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 import static org.jackhuang.hmcl.ui.FXUtils.runInFX;
+import static org.jackhuang.hmcl.ui.construct.AdvancedListItem.createImageView;
 import static org.jackhuang.hmcl.ui.versions.VersionPage.wrap;
 import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 import static org.jackhuang.hmcl.util.i18n.I18n.i18n;
+
+//test
+
 
 public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
     private MainPage mainPage = null;
@@ -73,7 +78,7 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             onRefreshedVersions(Profiles.selectedProfileProperty().get().getRepository());
 
         getStyleClass().remove("gray-background");
-        getLeft().getStyleClass().add("gray-background");
+        getLeft().getStyleClass().add("black-background");
     }
 
     @Override
@@ -134,6 +139,26 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
 
         protected Skin(RootPage control) {
             super(control);
+            ImageView titleIcon = new ImageView(FXUtils.newBuiltinImage("/assets/img/VTSSL-logo.png"));
+
+            AdvancedListItem Lsidebar_1 = new AdvancedListItem();
+
+            Lsidebar_1.createImageView(FXUtils.newBuiltinImage("/assets/img/VTSSL-logo.png"));
+
+
+            AdvancedListItem Lsidebar_2 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_3 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_4 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_5 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_6 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_7 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_8 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_9 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_10 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_11 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_12 = new AdvancedListItem();
+            AdvancedListItem Lsidebar_13 = new AdvancedListItem();
+
 
             // first item in left sidebar
             AccountAdvancedListItem accountListItem = new AccountAdvancedListItem();
@@ -190,16 +215,30 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
 
             // the left sidebar
             AdvancedListBox sideBar = new AdvancedListBox()
-                    .startCategory(i18n("account").toUpperCase(Locale.ROOT))
+                    //.startCategory(i18n("").toUpperCase(Locale.ROOT)) //account
+                    .add(Lsidebar_1)
+                    .add(Lsidebar_2)
+                    .add(Lsidebar_3)
+                    .add(Lsidebar_4)
+                    .add(Lsidebar_5)
+                    .add(Lsidebar_6)
+                    .add(Lsidebar_7)
+                    .add(Lsidebar_8)
+                    .add(Lsidebar_9)
+                    .add(Lsidebar_10)
+                    .add(Lsidebar_11)
+                    .add(Lsidebar_12)
+                    //.add(Lsidebar_13)
                     .add(accountListItem)
-                    .startCategory(i18n("version").toUpperCase(Locale.ROOT))
-                    .add(gameListItem)
+                    //.startCategory(i18n(" ").toUpperCase(Locale.ROOT)) //version
+
                     //.add(gameItem)
                     //.add(downloadItem)
-                    .startCategory(i18n("settings.launcher.general").toUpperCase(Locale.ROOT))
-                    .add(launcherSettingsItem)
-                    .add(chatItem)
-                    .add(chatItemDC)
+                    .startCategory("") //i18n(" ").toUpperCase(Locale.ROOT)    settings.launcher.general
+                    .add(gameListItem)
+                    //.add(launcherSettingsItem)
+                    //.add(chatItem)
+                    //.add(chatItemDC)
                     ;
 
             // the root page, with the sidebar in left, navigator in center.

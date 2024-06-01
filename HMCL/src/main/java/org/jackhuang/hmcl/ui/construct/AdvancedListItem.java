@@ -30,6 +30,8 @@ import javafx.scene.layout.StackPane;
 import org.jackhuang.hmcl.ui.FXUtils;
 import org.jackhuang.hmcl.util.Pair;
 
+import java.io.ObjectInputStream;
+
 import static org.jackhuang.hmcl.util.Pair.pair;
 
 public class AdvancedListItem extends Control {
@@ -39,6 +41,10 @@ public class AdvancedListItem extends Control {
     private final BooleanProperty active = new SimpleBooleanProperty(this, "active");
     private final StringProperty subtitle = new SimpleStringProperty(this, "subtitle");
     private final BooleanProperty actionButtonVisible = new SimpleBooleanProperty(this, "actionButtonVisible", true);
+
+    private final ObjectProperty<Image> image = new SimpleObjectProperty<>(this, "image");
+
+    private final ImageView imageView = new ImageView();
 
     public AdvancedListItem() {
         getStyleClass().add("advanced-list-item");
@@ -55,6 +61,17 @@ public class AdvancedListItem extends Control {
 
     public void setLeftGraphic(Node leftGraphic) {
         this.leftGraphic.set(leftGraphic);
+    }
+
+    public void setImages(Image image) {
+        this.image.set(image);
+    }
+    public Image getImage() {
+        return image.get();
+    }
+
+    public ImageView getImageView() {
+        return imageView;
     }
 
     public Node getRightGraphic() {

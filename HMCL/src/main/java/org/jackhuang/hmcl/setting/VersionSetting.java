@@ -476,7 +476,7 @@ public final class VersionSetting implements Cloneable {
         fullscreenProperty.set(fullscreen);
     }
 
-    private final IntegerProperty widthProperty = new SimpleIntegerProperty(this, "width", 854);
+    private final IntegerProperty widthProperty = new SimpleIntegerProperty(this, "width", 1920);
 
     public IntegerProperty widthProperty() {
         return widthProperty;
@@ -497,7 +497,7 @@ public final class VersionSetting implements Cloneable {
         widthProperty.set(width);
     }
 
-    private final IntegerProperty heightProperty = new SimpleIntegerProperty(this, "height", 480);
+    private final IntegerProperty heightProperty = new SimpleIntegerProperty(this, "height", 1080);
 
     public IntegerProperty heightProperty() {
         return heightProperty;

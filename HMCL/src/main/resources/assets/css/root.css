@@ -516,9 +516,9 @@
 .jfx-tool-bar {
     -fx-font-size: 13.0;
     -fx-pref-width: 100.0%;
-    -fx-min-height: 40px;
-    -fx-max-height: 40px;
-    -fx-pref-height: 40px;
+    -fx-min-height: 0px;
+    -fx-max-height: 0px;
+    -fx-pref-height: 0px;
 }
 
 .jfx-tool-bar .jfx-decorator-title {
@@ -553,6 +553,14 @@
 }
 
 .jfx-tool-bar.gray-background Label {
+    /* -fx-text-fill: BLACK; */
+}
+
+.jfx-tool-bar.alpha-background Label {
+    /* -fx-text-fill: BLACK; */
+}
+
+.jfx-tool-bar.black-background Label {
     /* -fx-text-fill: BLACK; */
 }
 
@@ -1312,7 +1320,7 @@
 }
 
 .body {
-    -fx-border-radius: 5;
+    -fx-border-radius: 9;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.3, 0.0, 0.0);
 }
 
@@ -1327,6 +1335,14 @@
 
 .gray-background {
     -fx-background-color: rgba(244, 244, 244, 0.5);
+}
+
+.alpha-background {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.black-background {
+    -fx-background-color: rgba(13, 13, 15, 1);
 }
 
 .white-background {

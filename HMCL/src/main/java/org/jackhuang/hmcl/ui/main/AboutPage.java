@@ -36,7 +36,7 @@ public class AboutPage extends StackPane {
             IconedTwoLineListItem launcher = new IconedTwoLineListItem();
             //launcher.setImage(FXUtils.newBuiltinImage("/assets/img/icon.png"));
             launcher.setTitle("VTS-HMCL");
-            launcher.setSubtitle("v1.0.0.0");
+            launcher.setSubtitle("v1.0.0");
             launcher.setExternalLink("https://github.com/VisionTravelStudio");
 
             IconedTwoLineListItem author = new IconedTwoLineListItem();
