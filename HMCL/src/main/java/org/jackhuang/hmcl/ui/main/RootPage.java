@@ -227,7 +227,7 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     .add(Lsidebar_9)
                     .add(Lsidebar_10)
                     .add(Lsidebar_11)
-                    .add(Lsidebar_12)
+                    //.add(Lsidebar_12)
                     //.add(Lsidebar_13)
                     .add(accountListItem)
                     //.startCategory(i18n(" ").toUpperCase(Locale.ROOT)) //version
